@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="./resources/css/styles.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="resources/js/functions.js"></script>
+    <title>Baby Naming</title>
+  </head>
+  <body>
+
+    <div class="content">
+      <h1 id="title">Baby Naming Combinations</h1>
+
+      <h2>Enter all the first and middle names you're considering, separated by commas, and see all possible combinations.</h2>
+
+      <div class="form">
+        <div class="first">
+          <h1>First Names</h1>
+          <textarea id="inputtedFirstNames"></textarea>
+          <br/>
+        </div>
+
+        <div class="middle">
+          <h1>Middle Names</h1>
+          <textarea id="inputtedMiddleNames"></textarea>
+          <br/>
+        </div>
+
+        <div class="last">
+          <h1>Last Name</h1>
+          <textarea id="inputtedLastName"></textarea>
+        </div>
+      </div>
+
+      <button class="btn" onclick="generateNameCombinations()">Generate</button></button>
+
+
+
+
+      <div class="results">
+          <h1>Full Name Combinations</h1>
+          <textarea id="resultNames"></textarea>
+          <br/>
+      </div>
+
+      <div class="footer">
+          <p>Copyright Cognotient LLC 2017</p>
+      </div>
+
+  </div>
+
+  </body>
+
+</html>

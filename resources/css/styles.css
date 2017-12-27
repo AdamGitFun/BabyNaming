@@ -1,0 +1,69 @@
+/* baby naming app css*/
+
+.content {
+  font-family: "Palatino";
+  text-align: center;
+  background-image: url("../images/baby_photo.jpeg");
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid black;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: black;
+}
+
+h2 {
+  width: 50%
+
+}
+
+.form {
+  display: inline-flex;
+}
+
+#title {
+  font-size: 3em;
+  font-style: bold;
+  border-bottom: 3px solid black;
+}
+
+textarea {
+  font-size: 2em;
+  width: 80%;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.results {
+  width: 60%;
+
+
+}
+
+#resultNames {
+  height: 500px;
+}
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: white;
+  font-size: 20px;
+
+  background: #3366cc;
+  padding: 10px 20px 10px 20px;
+  margin-top: 50px;
+  text-decoration: none;
+
+}
+
+.btn:hover {
+  background: #ff8095;
+  color: white;
+  text-decoration: none;
+}
