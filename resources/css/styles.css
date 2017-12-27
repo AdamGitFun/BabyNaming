@@ -2,7 +2,7 @@
 
 
 body {
-  background: url("../images/baby_photo2.jpg") no-repeat center center fixed;
+  background: url("../images/baby_photo3.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,7 +22,14 @@ body {
 
 h1 {
   font-size: 2.5em;
-  color: black;
+
+}
+
+.field-area {
+  color: white;
+  background: linear-gradient(#ff8095,#3366cc)
+
+
 }
 
 h2 {
@@ -70,7 +77,7 @@ textarea {
 
 .results {
   width: 65%;
-
+  resize: horizontal;
 
 }
 
