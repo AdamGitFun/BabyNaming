@@ -6,10 +6,14 @@ function generateNameCombinations() {
 
 
   /* remove white space and commas from user input and parse into an array */
-  var pattern = /\s*,\s*/;
+  var pattern = /\s*[,;\t\n]\s*/;
 
   rawFirstNameOptions = rawFirstNameOptions.split(pattern);
   rawMiddleNameOptions = rawMiddleNameOptions.split(pattern);
+  console.log("First Names");
+  console.log(rawFirstNameOptions);
+  console.log("Middle Names");
+  console.log(rawMiddleNameOptions);
   /* array parsing over */
 
   var namesOptions = aggregateNames(rawFirstNameOptions, rawMiddleNameOptions, lastName);
