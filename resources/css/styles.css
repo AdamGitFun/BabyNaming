@@ -20,6 +20,18 @@ body {
 
 }
 
+@media only screen and (max-width: 480px) {
+  .form {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+  }
+
+  .first,.middle,.last {
+    min-width: 200px;
+  }
+}
+
 h1 {
   font-size: 2.5em;
 
@@ -48,6 +60,8 @@ h2 {
 
 .form {
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
