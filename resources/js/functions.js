@@ -44,9 +44,6 @@ function generateNameCombinations() {
 
 function aggregateNames(rawfirstNames, rawmiddleNames, rawlastNames) {
 
-  console.log(rawfirstNames);
-  console.log(rawmiddleNames);
-
   var namesList = [];
 
   for (i=0; i < rawfirstNames.length; i++) {
@@ -96,12 +93,8 @@ function aggregateInitials(rawfirstNames, rawmiddleNames, rawlastNames) {
           initialsList.push(firstInitial+middleInitial+lastInitial);
         }
 
-
-
       }
-
     }
-
   }
 
   /*return initialsList.join("\r\n");*/
@@ -120,8 +113,9 @@ function combineNamesAndInitials(names, initials) {
   return namesAndInitialsResult.join("\r\n");
 }
 
-/*
+/* Test Data
 Adam, Frank, Steve, Silvestor, Mohan, Derrick
 Barney, Sebastian, Phillip, Jemal, Lennie
+Johnson, Williams, Johnson-Williams
 
 */
