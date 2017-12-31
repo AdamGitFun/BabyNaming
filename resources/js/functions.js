@@ -4,7 +4,7 @@ function generateNameCombinations() {
   var rawMiddleNameOptions = document.getElementById("inputtedMiddleNames").value;
   var rawLastNameOptions = document.getElementById("inputtedLastName").value;
 
-
+  scrollToResult();
   // check for presence of inputs //
   if (rawFirstNameOptions == "" || rawLastNameOptions == "") {
     alert("Please input at least one first name and one last name");
@@ -40,6 +40,15 @@ function generateNameCombinations() {
   document.getElementById("resultNames").innerHTML = finalResult;
   /*document.getElementById("resultInitials").innerHTML = initialOptions;*/
 
+}
+
+function scrollToResult() {
+
+  var button_bounding_rectangle = document.getElementById("generateButton").getBoundingClientRect();
+  var button_position = button_bounding_rectangle.bottom;
+  console.log(button_bounding_rectangle.bottom);
+
+  window.scrollTo(0,button_position);
 }
 
 function aggregateNames(rawfirstNames, rawmiddleNames, rawlastNames) {
