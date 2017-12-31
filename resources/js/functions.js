@@ -45,10 +45,11 @@ function generateNameCombinations() {
 function scrollToResult() {
 
   var button_bounding_rectangle = document.getElementById("generateButton").getBoundingClientRect();
-  var button_position = button_bounding_rectangle.bottom;
+  var button_y_position = button_bounding_rectangle.bottom;
+  var button_x_position = button_bounding_rectangle.right-button_bounding_rectangle.left;
   console.log(button_bounding_rectangle.bottom);
 
-  window.scrollTo(0,button_position);
+  window.scrollTo(button_x_position,button__y_position);
 }
 
 function aggregateNames(rawfirstNames, rawmiddleNames, rawlastNames) {
