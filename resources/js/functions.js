@@ -5,8 +5,25 @@ function generateNameCombinations() {
   var rawLastNameOptions = document.getElementById("inputtedLastName").value;
 
 
-  /* remove white space and commas from user input and parse into an array
-  Also checks for a comma, return, or semicolon delimiter*/
+  // check for presence of inputs //
+  if (rawFirstNameOptions == "" || rawLastNameOptions == "") {
+    alert("Please input at least one first name and one last name");
+    return;
+  }
+
+  // its okay to run without middle names but we are checking to make sure the user knows they did this //
+  if (rawMiddleNameOptions == "") {
+    if (confirm("Do you want to continue without any middle names?") == true) {
+      // continues without issue
+      rawMiddleNameOptions == "";
+    } else {
+      return;
+    }
+  }
+
+  //remove white space and commas from user input and parse into an array
+  //Also checks for a comma, return, or semicolon delimiter*/
+
   var pattern = /\s*[,;\t\n]\s*/;
 
   rawFirstNameOptions = rawFirstNameOptions.split(pattern);
@@ -40,7 +57,12 @@ function aggregateNames(rawfirstNames, rawmiddleNames, rawlastNames) {
         var middle = rawmiddleNames[j];
         var last = rawlastNames[k];
 
-        namesList.push(first + " " + middle + " " + last);
+        if (middle == "") {
+          namesList.push(first + " " + last);
+        } else {
+          namesList.push(first + " " + middle + " " + last);
+        }
+
 
       }
     }
@@ -68,7 +90,14 @@ function aggregateInitials(rawfirstNames, rawmiddleNames, rawlastNames) {
         var middleInitial = middle[0];
         var lastInitial = last[0];
 
-        initialsList.push(firstInitial+middleInitial+lastInitial);
+        if (middle == "") {
+          initialsList.push(firstInitial+lastInitial);
+        } else {
+          initialsList.push(firstInitial+middleInitial+lastInitial);
+        }
+
+
+
       }
 
     }
