@@ -25,23 +25,6 @@ body {
 
 }
 
-/* learning how to display things differenlty on mobile
-
-@media only screen and (max-width: 480px) {
-
-  body {
-    background-color: lightblue;
-
-  }
-
-}
-*/
-
-h1 {
-  font-size: 2.5em;
-
-}
-
 .field-area {
   color: white;
   background: linear-gradient(#ff8095,#3366cc)
@@ -49,7 +32,21 @@ h1 {
 
 }
 
-h2 {
+#title {
+  font-size: 3em;
+  color: white;
+  margin: 30px;
+  padding: 15px;
+
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+
+  border-bottom: 3px solid black;
+  background-color: #3366cc;
+}
+
+#instructions {
   width: 45%;
   color: white;
   margin: 20px;
@@ -67,32 +64,20 @@ h2 {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-
-#title {
-  font-size: 3em;
-  font-style: bold;
-  color: white;
-  margin: 30px;
-  padding: 15px;
-
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-
-  border-bottom: 3px solid black;
-  background-color: #3366cc;
-
 
 }
 
+.first, .middle, .last {
+
+
+}
 
 textarea {
   font-size: 2em;
   width: 80%;
   height: 200px;
   border-radius: 20px;
+
 }
 
 .results {
@@ -124,4 +109,26 @@ textarea {
   background: #ff8095;
   color: white;
   text-decoration: none;
+}
+
+/* learning how to display things differenlty on mobile */
+
+@media only screen and (max-width: 600px) {
+
+  #title, #instructions {
+    width: 90%;
+  }
+
+  .first, .middle, .last, .results {
+    width: 90%;
+  }
+
+  textarea {
+    width: 90%;
+  }
+
+  .form {
+
+  }
+
 }
