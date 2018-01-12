@@ -127,7 +127,7 @@ textarea {
     width: 90%;
   }
 
-  .results {
+  .results textarea {
     font-size: 1em;
   }
 
