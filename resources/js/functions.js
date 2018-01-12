@@ -44,7 +44,9 @@ function generateNameCombinations() {
 
 function scrollToResult() {
 
-  var button_bounding_rectangle = document.getElementById("generateButton").getBoundingClientRect();
+  //var button_bounding_rectangle = document.getElementById("generateButton").getBoundingClientRect();
+  var button_bounding_rectangle = document.getElementById("resultNames").getBoundingClientRect();
+  
   var button_y_position = button_bounding_rectangle.bottom;
   var button_x_position = button_bounding_rectangle.right - button_bounding_rectangle.left;
   console.log(button_bounding_rectangle.bottom);

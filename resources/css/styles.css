@@ -111,6 +111,10 @@ textarea {
   text-decoration: none;
 }
 
+#generateButton {
+  border: 5px solid black;
+}
+
 /* learning how to display things differenlty on mobile */
 
 @media only screen and (max-width: 600px) {
@@ -121,6 +125,10 @@ textarea {
 
   .first, .middle, .last, .results {
     width: 90%;
+  }
+
+  .results {
+    font-size: 1em;
   }
 
   textarea {
