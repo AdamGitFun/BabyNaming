@@ -46,7 +46,7 @@ function scrollToResult() {
 
   //var button_bounding_rectangle = document.getElementById("generateButton").getBoundingClientRect();
   var button_bounding_rectangle = document.getElementById("resultNames").getBoundingClientRect();
-  
+
   var button_y_position = button_bounding_rectangle.bottom;
   var button_x_position = button_bounding_rectangle.right - button_bounding_rectangle.left;
   console.log(button_bounding_rectangle.bottom);
@@ -123,6 +123,26 @@ function combineNamesAndInitials(names, initials) {
   }
 
   return namesAndInitialsResult.join("\r\n");
+}
+
+function download() {
+
+  text = "No names have been generated.";
+
+  if (document.getElementById("resultNames").innerHTML) {
+    text = document.getElementById("resultNames").innerHTML;
+  }
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', "Name-Combinations.txt");
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 }
 
 /* Test Data
