@@ -122,15 +122,19 @@ function combineNamesAndInitials(names, initials) {
     namesAndInitialsResult.push(names[i] + " (" + initials[i] + ")");
   }
 
-  return namesAndInitialsResult.join("\r\n");
+  return namesAndInitialsResult.join("\n");
 }
 
 function download() {
 
-  text = "No names have been generated.";
-
   if (document.getElementById("resultNames").innerHTML) {
     text = document.getElementById("resultNames").innerHTML;
+    console.log('text is: ');
+    console.log(typeof text);
+    console.log(text.includes("\r"));
+    console.log(text.includes("\n"));
+  } else {
+    text = "No names have been generated.";
   }
 
   var element = document.createElement('a');
