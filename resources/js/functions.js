@@ -1,5 +1,8 @@
 function generateNameCombinations() {
 
+  // google analytics tracking
+  gtag('event','generateNameCombinations');
+
   var rawFirstNameOptions = document.getElementById("inputtedFirstNames").value;
   var rawMiddleNameOptions = document.getElementById("inputtedMiddleNames").value;
   var rawLastNameOptions = document.getElementById("inputtedLastName").value;
@@ -126,6 +129,9 @@ function combineNamesAndInitials(names, initials) {
 }
 
 function download() {
+
+  // google analytics tracking
+  gtag('event','downloadCSV');
 
   if (document.getElementById("resultNames").innerHTML) {
     text = document.getElementById("resultNames").innerHTML;
