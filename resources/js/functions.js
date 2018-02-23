@@ -40,6 +40,7 @@ function generateNameCombinations() {
 
   var finalResult = combineNamesAndInitials(namesOptions, initialOptions);
 
+
   document.getElementById("resultNames").innerHTML = finalResult;
   /*document.getElementById("resultInitials").innerHTML = initialOptions;*/
 
